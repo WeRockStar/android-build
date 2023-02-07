@@ -4,7 +4,7 @@ The image contains the `Android SDK`, `Fastlane`, and more utilities tools.
 
 Here is example for Gitlab CI `(.gitlab-ci.yml)`
 ```yaml
-image: werockstar/android-ci:0.0.1-alpha01
+image: werockstar/android-build:0.0.1-alpha01
 
 before_script:
   - export GRADLE_USER_HOME=$(pwd)/.gradle
