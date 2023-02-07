@@ -2,7 +2,7 @@
 
 The image contains the `Android SDK`, `Fastlane`, and more utilities tools.
 
-Here is example for Gitlab CI `(.gitlab-ci.yml)`
+### Here is example for Gitlab CI `(.gitlab-ci.yml)`
 ```yaml
 image: werockstar/android-build:0.0.1-alpha01
 
