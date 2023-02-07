@@ -1,4 +1,4 @@
-# Docker image for Android
+# Docker image for Android (Experiment!)
 
 The image contains the `Android SDK`, `Fastlane`, and more utilities tools.
 
