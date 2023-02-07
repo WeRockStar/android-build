@@ -1,0 +1,6 @@
+build-tools;33.0.1
+platforms;android-33
+platforms;android-32
+extras;android;m2repository
+extras;google;google_play_services
+extras;google;m2repository
