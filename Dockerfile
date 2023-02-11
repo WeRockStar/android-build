@@ -9,10 +9,8 @@ ENV ANDROID_SDK_ROOT "/android-sdk"
 ENV ANDROID_HOME "${ANDROID_SDK_ROOT}"
 ENV PATH "$PATH:${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin:${ANDROID_SDK_ROOT}/platform-tools"
 
-RUN apt-get --quiet update --yes && apt-get --quiet install --yes -qqy --no-install-recommends locales openjdk-${JDK_VERSION}-jdk curl unzip git-core make ruby ruby-dev build-essential
-
-RUN gem install google-api-client
-RUN gem install fastlane
+RUN apt-get --quiet update --yes && apt-get --quiet install --yes -qqy --no-install-recommends bzip2 locales openjdk-${JDK_VERSION}-jdk curl unzip git-core make ruby-full build-essential
+RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN locale-gen en_US.UTF-8
 ENV LANG='en_US.UTF-8' LANGUAGE='en_US:en' LC_ALL='en_US.UTF-8'
@@ -28,3 +26,6 @@ RUN ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --update
 
 ADD packages.txt /sdk
 RUN ${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin/sdkmanager --package_file=/sdk/packages.txt
+
+RUN gem install bundler
+RUN gem install fastlane
