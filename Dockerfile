@@ -1,8 +1,8 @@
-FROM ubuntu:20.04
+FROM ubuntu:23.04
 
 LABEL maintainer="werockstar"
 
-ARG JDK_VERSION=11
+ARG JDK_VERSION=17
 
 ENV COMMAND_TOOLS "9477386"
 ENV ANDROID_SDK_ROOT "/android-sdk"
