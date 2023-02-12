@@ -4,7 +4,7 @@ The image contains the `Android SDK`, `Fastlane`, `JDK-11`, `mobsfscan`(Static a
 
 ### Here is example for Gitlab CI `(.gitlab-ci.yml)`
 ```yaml
-image: werockstar/android-build:latest
+image: werockstar/android-build:0.0.1-alpha04
 
 before_script:
   - export GRADLE_USER_HOME=$(pwd)/.gradle
