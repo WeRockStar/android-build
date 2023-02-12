@@ -1,6 +1,6 @@
 # Docker image for Android (Experiment!)
 
-The image contains the `Android SDK`, `Fastlane`, `JDK-11`, `mobsfscan`(Static analysis tools), and more utilities tools.
+The image contains the `Android SDK`, `Fastlane`, `JDK-17`, `mobsfscan`(Static analysis tools), and more utilities tools.
 
 ### Here is example for Gitlab CI `(.gitlab-ci.yml)`
 ```yaml
