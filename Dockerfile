@@ -9,7 +9,7 @@ ENV ANDROID_SDK_ROOT "/android-sdk"
 ENV ANDROID_HOME "${ANDROID_SDK_ROOT}"
 ENV PATH "$PATH:${ANDROID_SDK_ROOT}/cmdline-tools/latest/bin:${ANDROID_SDK_ROOT}/platform-tools"
 
-RUN apt-get --quiet update --yes && apt-get --quiet install --yes -qqy --no-install-recommends bzip2 locales openjdk-${JDK_VERSION}-jdk curl unzip git-core make ruby-full build-essential
+RUN apt-get --quiet update --yes && apt-get --quiet install --yes -qqy --no-install-recommends bzip2 locales openjdk-${JDK_VERSION}-jdk curl unzip git-core make ruby-full build-essential python3-pip
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
@@ -33,3 +33,4 @@ RUN sdkmanager --package_file=/android-sdk/packages.txt
 
 RUN gem install bundler
 RUN gem install fastlane
+RUN pip3 install --upgrade mobsfscan

@@ -1,10 +1,10 @@
 # Docker image for Android (Experiment!)
 
-The image contains the `Android SDK`, `Fastlane`, and more utilities tools.
+The image contains the `Android SDK`, `Fastlane`, `mobsfscan`(Static analysis tools), and more utilities tools.
 
 ### Here is example for Gitlab CI `(.gitlab-ci.yml)`
 ```yaml
-image: werockstar/android-build:0.0.1-alpha01
+image: werockstar/android-build:0.0.1-alpha02
 
 before_script:
   - export GRADLE_USER_HOME=$(pwd)/.gradle
@@ -28,11 +28,12 @@ unit-test:
 build-android:
   stage: build
   script:
-    - ./gradlew androidApp:assDe
+    # - ./gradlew androidApp:assDe
+    - fastlane build
 
 deploy-dev:    
   stage: deploy-dev
   environment: dev
   script:
-    - echo "Deploying application..."
+    - fastlane beta
 ```
