@@ -34,3 +34,4 @@ RUN sdkmanager --package_file=/android-sdk/packages.txt
 
 RUN gem install bundler
 RUN gem install fastlane
+RUN curl -o flutter.tar.xz https://storage.googleapis.com/flutter_infra_release/releases/stable/linux/flutter_linux_3.29.3-stable.tar.xz
