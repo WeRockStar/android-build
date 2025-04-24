@@ -1,0 +1,14 @@
+# Git
+.git
+.gitignore
+
+# Docker
+.docker
+.dockerignore
+build-push.sh
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
